@@ -6,6 +6,9 @@ module Greeting
     name ||= "my friend"
 
     names = Array(name)
+    # names = names.map do |name|
+    #   name.split(/,\s*/)
+    # end.flatten
 
     parts = names.partition do |name|
       name != name.upcase
