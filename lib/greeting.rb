@@ -7,7 +7,12 @@ module Greeting
 
     names = Array(name)
     names = names.map do |name|
-      name.split(/,\s*/)
+      if match = name.match(/^["'](.*)["']$/)
+        # quoted
+        match[1]
+      else
+        name.split(/,\s*/)
+      end
     end.flatten
 
     parts = names.partition do |name|
