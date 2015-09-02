@@ -11,6 +11,6 @@ class TestGreeting < Minitest::Test
   end
 
   def test_nil_name
-    assert_equal "Hell, my friend", Greeting.greet(nil)
+    assert_equal "Hello, my friend", Greeting.greet(nil)
   end
 end
