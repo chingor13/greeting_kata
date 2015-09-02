@@ -33,4 +33,8 @@ class TestGreeting < Minitest::Test
   def test_requirement_7
     assert_equal "Hello, Bob, Charlie, and Dianne.", Greeting.greet(["Bob", "Charlie, Dianne"])
   end
+
+  def test_requirement_8
+    assert_equal "Hello, Bob and Charlie, Dianne.", Greeting.greet(["Bob", "\"Charlie, Dianne\""])
+  end
 end
