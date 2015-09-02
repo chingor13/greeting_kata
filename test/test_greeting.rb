@@ -9,4 +9,8 @@ class TestGreeting < Minitest::Test
   def test_basic
     assert_equal "Hello, Bob", Greeting.greet("Bob")
   end
+
+  def test_nil_name
+    assert_equal "Hell, my friend", Greeting.greet(nil)
+  end
 end
