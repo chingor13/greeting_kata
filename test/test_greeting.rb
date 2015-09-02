@@ -7,11 +7,11 @@ class TestGreeting < Minitest::Test
   end
 
   def test_requirement_1
-    assert_equal "Hello, Bob", Greeting.greet("Bob")
+    assert_equal "Hello, Bob.", Greeting.greet("Bob")
   end
 
   def test_requirement_2
-    assert_equal "Hello, my friend", Greeting.greet(nil)
+    assert_equal "Hello, my friend.", Greeting.greet(nil)
   end
 
   def test_requirement_3

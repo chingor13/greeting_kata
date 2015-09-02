@@ -5,14 +5,23 @@ module Greeting
   def self.greet(name)
     name ||= "my friend"
 
-    if name.is_a?(Array)
-      return "Hello, #{name.to_sentence}."
-    else
-      if name == name.upcase
-        return "HELLO #{name}!"
-      end
+    names = Array(name)
+
+    parts = names.partition do |name|
+      name != name.upcase
     end
 
-    "Hello, #{name}"
+    parts.map do |part|
+      subgreet(part)
+    end.compact.join(" AND ")
+  end
+
+  def self.subgreet(names)
+    return nil if names.empty?
+    if names.all?{|name| name.upcase == name}
+      return "HELLO #{names.to_sentence}!"
+    else
+      "Hello, #{names.to_sentence}."
+    end
   end
 end
