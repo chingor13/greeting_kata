@@ -27,7 +27,7 @@ module Greeting
   def self.subgreet(names)
     return nil if names.empty?
     if names.all?{|name| name.upcase == name}
-      return "HELLO #{names.to_sentence}!"
+      return "HELLO #{names.to_sentence}!".upcase
     else
       "Hello, #{names.to_sentence}."
     end
