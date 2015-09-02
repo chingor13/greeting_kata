@@ -15,6 +15,6 @@ class TestGreeting < Minitest::Test
   end
 
   def test_requirement_3
-    assert_equal "HELLO JERRY!", Greeting.green("JERRY")
+    assert_equal "HELLO JERRY!", Greeting.greet("JERRY")
   end
 end
