@@ -17,4 +17,8 @@ class TestGreeting < Minitest::Test
   def test_requirement_3
     assert_equal "HELLO JERRY!", Greeting.greet("JERRY")
   end
+
+  def test_requirement_4
+    assert_equal "Hello, Jill and Jane.", Greeting.greet(["Jill", "Jane"])
+  end
 end
