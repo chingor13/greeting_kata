@@ -6,11 +6,15 @@ class TestGreeting < Minitest::Test
     refute_nil ::Greeting::VERSION
   end
 
-  def test_basic
+  def test_requirement_1
     assert_equal "Hello, Bob", Greeting.greet("Bob")
   end
 
-  def test_nil_name
+  def test_requirement_2
     assert_equal "Hello, my friend", Greeting.greet(nil)
+  end
+
+  def test_requirement_3
+    assert_equal "HELLO JERRY!", Greeting.green("JERRY")
   end
 end
